@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <h1>The Marauders's Quest</h1>
+        </div>
+        <div class="header-right">
+            <% if (username) { %>
+                <span class="username"><%= username %></span>
+                <span class="level">Lvl <%= level %> </span>
+                <% if (userClass != 'none') { %>
+                <span class="userClass"><%= userClass%></span>
+                <% } %>
+                <form class="logout-form" action="" method="POST">
+                    <button type="submit" class="logout-button" onclick="logout(event)">Logout</button>
+                </form>
+            <% } %>
+        </div>
+        <script src="/js/auth.js"></script>
+    </header>

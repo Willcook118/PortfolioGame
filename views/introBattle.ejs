@@ -1,0 +1,53 @@
+<%- include('partials/header', {title: 'Intro Battle' }) %>
+<body>
+<div class="battleContainerStatusInfo">
+    <div class="usernameBattleContainer">
+        <div class = "usernameBattleContainerUser">
+            <span id="battleUserUsername"><%= username %></span>
+            <span id="battleUserLevel">lvl 1</span>
+        </div>
+        <div class = "usernameBattleContainerEnemy">
+            <span id="battleEnemyLevel">lvl 1</span>
+            <span id="battleEnemyUsername"><%= monster.monster_name %></span>
+        </div>    
+    </div>
+    <div class = "healthContainer">
+        <div class ="healthBar" id="userHealthBar">
+            <div class="healthBarFillUser" id="battleUserHealthBarFill">
+                <span class="heatlhPoints" id="battleUserHealthPoints"><span class="userHp"><%= user.maxHp %></span>/<%= user.maxHp %></span>
+            </div>
+        </div>
+        <div class ="healthBar" id="enemyHealthBar">
+            <div class="healthBarFillMonster" id="battleEnemyHealthBarFill">
+                <span class="heatlhPoints" id="battleEnemyHealthPoints"><span class="monsterHp"><%= monster.maxHp %></span>/<%= monster.maxHp %></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="battleContainer">
+    <div class="battleImages">
+        <div id="userImage">
+            <img src="../images/basic warrior.png" >
+        </div>
+        <div id="enemyImage">
+            <img class='goblin' src="../images/goblin.png" >
+        </div>
+    </div>
+    <div class="battleSelectionContainer">
+        <form action="/game/attack" method="POST" id="battleSelectionForm">
+            <div class="battleSelectionTopRow">
+                <button name="move" value="move_1" id="move1" class="battleMove" onclick="attackMonster(event, 'move_1')"><%= user.move_1 %></button>
+                <button name="move" value="move_2" id="move2" class="battleMove" onclick="attackMonster(event, 'move_2')"><%= user.move_2 %></button>
+            </div>
+            <div class="battleSelectionBottomRow">
+                <button name="move" value="move_3" id="move3" class="battleMove" onclick="attackMonster(event, 'move_3')"><%= user.move_3 %></button>
+                <button name="move" value="move_4" id="move4" class="battleMove" onclick="attackMonster(event, 'move_4')"><%= user.move_4 %></button>
+            </div>
+        </form>
+    </div>
+    <div class="battleLogContainer">
+            <span id="battleDialog">Battle Dialog Box</span>
+    </div>
+</div>
+<script src="/js/battle.js"></script>
+</body>

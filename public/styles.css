@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    background: linear-gradient(112.5deg, rgb(201,198,198) 0%, rgb(201,198,198) 10%,rgb(180,178,178) 10%, rgb(180,178,178) 53%,rgb(155,153,153) 53%, rgb(155,153,153) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(139,135,135) 60%, rgb(139,135,135) 88%,rgb(81,81,81) 88%, rgb(81,81,81) 91%,rgb(81,81,81) 91%, rgb(81,81,81) 100%),linear-gradient(157.5deg, rgb(201,198,198) 0%, rgb(201,198,198) 10%,rgb(180,178,178) 10%, rgb(180,178,178) 53%,rgb(155,153,153) 53%, rgb(155,153,153) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(139,135,135) 60%, rgb(139,135,135) 88%,rgb(81,81,81) 88%, rgb(81,81,81) 91%,rgb(81,81,81) 91%, rgb(81,81,81) 100%),linear-gradient(135deg, rgb(201,198,198) 0%, rgb(201,198,198) 10%,rgb(180,178,178) 10%, rgb(180,178,178) 53%,rgb(155,153,153) 53%, rgb(155,153,153) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(139,135,135) 60%, rgb(139,135,135) 88%,rgb(81,81,81) 88%, rgb(81,81,81) 91%,rgb(81,81,81) 91%, rgb(81,81,81) 100%),linear-gradient(90deg, rgb(180,178,178),rgb(228, 228, 228));
+    background-blend-mode: overlay,overlay,overlay,normal;
+}
+
+.authenticationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:22%;
+    left:25%;
+    width: 50%;
+    position: absolute;
+    
+
+}
+
+.titleName {
+    font-size: 75px;
+    font-family: cursive;
+    text-align: center;
+    padding-top: 40px;
+    letter-spacing: 7px;
+}
+
+.authenticationFormContainer {
+    display: flex;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    border:#333 1px solid;
+    border-radius: 5px;
+    background-color: rgb(189, 189, 189);
+}
+
+.authenticationSubmit {
+    display: flex;
+    justify-content: center;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-family: cursive;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.level {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.userClass {
+    margin-right: 10px;
+    font-size: 15px;
+
+}
+
+.header-right .username {
+    margin-right: 10px;
+}
+
+.logout-form {
+    margin: 0;
+}
+button {
+    padding: 5px 20px;
+    background-color: #3d3d3d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-button {
+    background-color: #bababa;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.welcomeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#newUserSelection {
+    width: 70%;
+} 
+
+.classButton {
+    margin: 10px 10px;
+    padding: 10px 25px;
+}
+
+/*
+    Battle
+*/
+
+.battleContainerStatusInfo {
+    margin-top: 3%;
+
+}
+.usernameBattleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.usernameBattleContainerUser {
+    display: flex;
+    align-items: baseline;
+    margin-left: 10%;
+}
+
+#battleUserUsername {
+    margin-right: 25px;
+
+}
+
+.usernameBattleContainerEnemy {
+    display: flex;
+    align-items: baseline;
+    margin-right: 10%;
+}
+
+#battleEnemyUsername {
+    margin-left: 25px;
+    
+}
+
+#battleUserLevel, #battleEnemyLevel {
+    font-size: 15px;
+}
+
+#battleUserUsername, #battleEnemyUsername {
+    font-size: 25px;
+}
+
+.healthContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.healthBar{
+    display: flex;
+    align-items: baseline;
+    width: 35%;
+    height: 20px;
+    border:#333 1px solid;
+    border-radius: 2px;
+}
+
+#userHealthBar {
+    position: relative;
+    margin-left: 10%;
+}
+
+#enemyHealthBar {
+    position: relative;
+    margin-right: 10%;
+}
+
+.healthBarFillUser{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: width 1s;
+}
+
+.healthBarFillMonster{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: width 1s;
+}
+
+
+#battleEnemyHealthPoints {
+    position: absolute;
+    right: 5px;
+}
+
+#battleUserHealthPoints {
+    position: absolute;
+    left: 5px;
+}
+
+#userImage {
+    height: 300px;
+    width:200px;
+}
+
+.img {
+    height: 200px;
+    width: 300px;
+}
+
+.battleContainer {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+
+}
+
+.battleImages {
+    display: flex;
+    justify-content: space-between; 
+    width:55%;
+}
+
+img {
+    height: 250px;
+}
+
+#userImage, #enemyImage {
+    width: 200px; 
+    height: 250px; 
+    margin-bottom: 10px; 
+}
+
+.battleSelectionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:3%;
+}
+
+#move1, #move2, #move3, #move4 {
+    margin: 15px 45px 15px 45px;
+    height: 80px;
+    width: 260px;
+    background-color: rgb(104, 104, 104);
+    border-radius: 5px; 
+}
+
+#move1:hover, #move2:hover, #move3:hover, #move4:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.battleLogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    background-color: #f0f0f0; 
+    padding: 40px 100px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+#battleDialog {
+    height: 15%;
+}

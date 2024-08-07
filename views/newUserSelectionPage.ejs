@@ -1,0 +1,22 @@
+
+<%- include('partials/header', { title: 'New User Selection' }) %>
+<body>
+    <div class="content">
+        <div class="welcomeContainer">
+            <h1>Welcome to the game</h1>
+            <p>Lots of typing of welcome message and explaining the lore of the game </p>
+            <div id="newUserSelection">
+                <h3>Please choose your class blessing adventurer!</h3>
+                <div id="classSelection">
+                    <form action="/game/selectClass" method="POST" id="classSelectionForm" >
+                        <button class="classButton" id="warrior" name="class" class="class" value="warrior" onclick="selectClass(event, 'Warrior')">Warrior</button>
+                        <button class="classButton" id="ranger" name="class" class="class" value="ranger" onclick="selectClass(event, 'Ranger')">Ranger</button>
+                        <button class="classButton" id="lightMage" name="class" class="class" value="light_mage" onclick="selectClass(event, 'Light Mage')">Light Mage</button>
+                        <button class="classButton" id="darkMage" name="class" class="class" value="dark_mage" onclick="selectClass(event, 'Dark Mage')">Dark Mage</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/userAccount.js"></script>
+</body>
