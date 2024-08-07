@@ -7,7 +7,11 @@ To setup and play run the folling commands through terminal -
 - npm run db:init
 - node app.js
 
-After first time running only "node app.js" will need to be used to run the server
+npm i installs any dependencies needed
+npm run db:init will run 2 scripts to created the database file called game.db and populate with data needed
+node app.js will run the server served with express.js
+
+After first time running only "node app.js" will need to be used to run the server using node 
 
 **To test **
 - npm run cy:run
