@@ -45,9 +45,4 @@ const gameRoutes = require('./routes/game');
 app.use('/auth', authRoutes);
 app.use('/game', gameRoutes);
 
-
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
-});
-
 module.exports = app;

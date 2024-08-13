@@ -15,8 +15,15 @@ router.post('/register', async(req, res) => {
     const uuidValue = uuid.v4();
     const {username, password} = req.body;
 
+    if(!username && !password){
+        return res.status(400).json({error: 'Please enter a username and password'})
+    } else if(!username && password) {
+        return res.status(400).json({error: 'Please enter a username'})
+    } else if(!password && username){
+        return res.status(400).json({error: 'Please enter a password'})
+    }
+
     try {
-        
         db.get(`SELECT * FROM accounts WHERE username = ?`, [username], (err, user) => {
             if (user) { return res.status(400).json({error: 'User already exists'})}
     
@@ -33,7 +40,7 @@ router.post('/register', async(req, res) => {
                 })
             db.run(`INSERT INTO users (user_id, username) VALUES (?, ?)`, [uuidValue, username], (err) => {
                 if (err) throw err;
-                    return res.status(200).json({ message: ` ${username} is registered`})
+                    return res.status(201).json({ message: ` ${username} is registered`})
             })
             })
         })
@@ -83,7 +90,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
     req.session.destroy((err) => {
-        res.status(200).json({ message: 'Logged out' });
+        res.status(204).json({ message: 'Logged out' });
         if(err) {
             return res.status(500).send('Error logging out');
         }
