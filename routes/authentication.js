@@ -58,6 +58,14 @@ router.get('/login', (req, res) => {
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
+    if(!username && !password){
+        return res.status(400).json({error: 'Please enter a username and password'})
+    } else if(!username && password) {
+        return res.status(400).json({error: 'Please enter a username'})
+    } else if(!password && username){
+        return res.status(400).json({error: 'Please enter a password'})
+    }
+
     try {
         const userAccount = await getAccountByUsername(username);
         const results = await bcrypt.compare(password, userAccount.password);
