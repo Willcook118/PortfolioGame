@@ -40,9 +40,11 @@ app.set('views', path.join(__dirname, 'views'));
 // Routes
 const authRoutes = require('./routes/authentication'); 
 const gameRoutes = require('./routes/game');
+const mapRoutes = require('./routes/maps');
 
 
 app.use('/auth', authRoutes);
 app.use('/game', gameRoutes);
+app.use('/maps', mapRoutes);
 
 module.exports = app;
