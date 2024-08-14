@@ -76,41 +76,4 @@ describe('auth endpoints', () => {
         expect(response.status).toBe(400)
         expect(response.data.error).toBe('Password must contain at least one number')
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // it('Register - valid username and invalid password (too short)', async () => {
-    //     const randomNumber = random()
-    //     const res = await request(app)
-    //         .post('/auth/register')
-    //         .send({username: 'testingUser' + randomNumber, password: 'badPass'})
-
-    //         expect(res.statusCode).toBe(400);
-    //         expect(res.body.error).toBe('Password must be at least 8 characters long')
-    // })
-
-    // it('Register - valid username and invalid password (corrent length but no number)', async () => {
-    //     const randoNumber = random()
-    //     const res = await request(app)
-    //         .post('/auth/register')
-    //         .send({username:'testingUser' + randoNumber, password:'testingpasswordNoNumber'})
-
-    //         expect(res.statusCode).toBe(400);
-    //         expect(res.body.error).toBe('Password must contain at least one number')
-    // })
 })
