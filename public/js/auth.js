@@ -47,9 +47,7 @@ async function register(event){
     });
     const data = await response.json();
 
-    console.log(data);
-
-    if(response.status === 200){
+    if(response.status === 201){
         window.location.href = '/auth/login';
     }
     if(data.error === 'User already exists'){
@@ -73,7 +71,7 @@ async function logout(event){
         },
     });
 
-    if(response.status === 200){
+    if(response.status === 204){
         window.location.href = '/auth/login';
     }
 }
