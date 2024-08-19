@@ -428,18 +428,22 @@ img {
     border: 1px black solid;
     margin: 0.5%; 
     background-color: lightgray;
+    align-items: center;
+    justify-items: center;
 }
 
 .statsPanelLeft {
     display: flex;
     height: 100%;
     width: 50%;
+
 }
 
 .statsPanelRight {
     display: flex;
     height:100%;
     width: 50%;
+
 }
 
 .userStats {
@@ -515,7 +519,7 @@ img {
 }
 
 #userStatsTextLeft, #userStatsTextRight {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #userStatsTextLeft {
