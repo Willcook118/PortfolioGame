@@ -1,6 +1,79 @@
-<%- include('partials/header', { title: 'New User Selection' }) %>
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' href='/styles.css'>
+</head>
 <body>
-    <div class="homepageTitle">
-        <h1>Homepage, stuff will go here like account info, scenario, dungeons, other options</h1>
+    <div class="homepageContainer">
+        <div class="homepageContainerLeft">
+            <div class="homepageAccountPanel">
+                <p class="homepageAccountText">
+                <%= username %>
+                <br>
+                Level: <%= level %>
+                <br>
+                Class: <%= userClass %>
+                <br>
+                </p>
+                <div class="homepageAccountPanelExp">
+                    <div class="xpBox">
+                        <div class="xpBoxFill">
+                            <p id="xpBoxText"> xp: 75/100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="userStatsPanel">
+                <div class="statsPanelLeft">
+                    <p id="userStatsTextLeft">
+                        HP: 
+                        <br>
+                        <%= user.maxHp %>
+                        <br>
+                        Attack: 
+                        <br>
+                        <%= user.attack %>
+                        <br>
+                        Defence: 
+                        <br>
+                        <%=user.defense %>
+                    </p>
+                </div>
+                <div class="statsPanelRight">
+                    <p id="userStatsTextRight">
+                        Speed:
+                        <br>
+                        <%= user.speed %>
+                        <br>
+                        Special Attack: 
+                        <br>
+                        <%= user.special_attack %>
+                        <br>
+                        Special Defence: 
+                        <br>
+                        <%= user.special_defense %>
+                    </p>
+                </div>
+            </div>
+            <div class="homepageEditAccount">
+                <p class="homepageText">Edit Account</p>
+            </div>
+            <div class="homepageLogoutPanel">
+                <p id="homepageLogoutText">Log Out</p>
+            </div>
+        </div>
+        <div class="homepageContainerRight">
+            <button class="exploreContainer">
+                <p class="homepageText">Explore the world</p>
+            </button>
+            <button class="dungeonContainer">
+                    <p class="homepageText">Trial the dungeon</p>
+            </button>
+            <button class="pendingContainer">
+                <p class="homepageText">To come soon...</p>
+            </button>
+            <button class="pendingContainer">
+                <p class="homepageText">To come soon...</p>
+            </button>
+        </div>
     </div>
 </body>

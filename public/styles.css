@@ -343,3 +343,198 @@ img {
     height:100%;
     width:100%;
 }
+
+/*
+    Homepage
+*/
+.homepageContainer {
+    height: 100%;
+    width: 100%;
+    display:flex;
+}
+
+.homepageTopContainer {
+    display:flex;
+    height: 50%;
+    width: 100%
+}
+
+.homepageContainerRight {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    height: 100%;
+}
+
+.homepageContainerLeft {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    flex:1;
+}
+
+.homepageAccountPanel {
+    display:flex;
+    flex:0.5;
+    margin: 0.5% 0.5% 0.5% 0.5%;
+    background-color: lightgray;
+    font-size: 30px;
+    font-family: cursive;
+    letter-spacing: 7px;
+    font-weight: 900;
+    border-width: 5px;
+    border-color: black;
+    border-style: double;
+    flex-direction: column;
+}
+
+.homepageEditAccount {
+    display: flex;
+    flex: 0.1;
+    border: 1px black solid;
+    margin: 0.5%;
+    background-color: lightgray;
+}
+
+.homepageAccountPanelExp {
+    display:flex;
+    width: 100%;
+}
+
+.xpBox {
+    border: 1px black solid;
+    box-shadow: 0 2px 2px 0 black;
+    margin: 0 5px 0 5px;  
+    font-size: 20px; 
+    align-items: center;
+    height:100%;
+    width: 80%
+}
+
+.xpBoxFill {
+    background-color: beige;
+    margin:0;
+    height: 100%;
+    width:75%;
+}
+
+#xpBoxText {
+    margin:0 0 0 5%; 
+}
+
+.userStatsPanel {
+    display: flex;
+    flex:0.47;
+    border: 1px black solid;
+    margin: 0.5%; 
+    background-color: lightgray;
+}
+
+.statsPanelLeft {
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+
+.statsPanelRight {
+    display: flex;
+    height:100%;
+    width: 50%;
+}
+
+.userStats {
+
+}
+
+.homepageLogoutPanel {
+    display: flex;
+    flex: 0.1;
+    margin: 0.5%;
+    background-color: rgb(246, 160, 160);
+}
+
+.exploreContainer {
+    border: 1px black solid;
+    flex:1;
+    margin: 1% 5% 1% 5%;
+}
+
+.pendingContainer {
+    flex:1;
+    margin: 1% 5% 1% 5%;
+}
+
+.dungeonContainer {
+    border: 1px black solid;
+    flex:1;
+    margin: 1% 5% 1% 5%;
+    background-image: url('../images/dungeonBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255,255,255,0.75);
+    background-blend-mode: lighten;
+}
+
+.exploreContainer {
+    border: 1px black solid;
+    flex:1;
+    margin: 1% 5% 1% 5%;
+    background-image: url('../images/exploreBackground.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255,255,255,0.75);
+    background-blend-mode: lighten;
+}
+
+.pendingContainer {
+    border: 1px black solid;
+    flex:1;
+    margin: 1% 5% 1% 5%;
+    background-image: url('../images/underConstruction.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255,255,255,0.8);
+    background-blend-mode: lighten;
+}
+
+.homepageText {
+    opacity: 1;
+    color: black;
+}
+
+.homepageAccountText {
+    margin-left: 5px;
+    margin-top: 50px;
+}
+
+#homepageLogoutText {
+    font-size: 20px;
+}
+
+#userStatsTextLeft, #userStatsTextRight {
+    font-size: 20px;
+}
+
+#userStatsTextLeft {
+    margin-left: 5px;
+}
+
+#userStatsTextRight {
+
+}
+
+.dungeonContainer, .exploreContainer, .pendingContainer, .homepageEditAccount, .userStatsPanel, .homepageLogoutPanel {
+    border-width: 5px;
+    border-color: black;
+    border-style: double;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+    font-family: cursive;
+    letter-spacing: 7px;
+    font-weight: 900;
+}
