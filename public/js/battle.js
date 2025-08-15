@@ -84,6 +84,9 @@ async function monsterAttack(){
         if(data.monsterHp == 0){
             battleDialog.textContent = `${data.monsterName} has been defeated!`;
             toggleAttackButtonsDisable();
+            if(window.location.pathname === '/game/introBattle'){
+                document.querySelector('#introBattleNavigationLink').style.visibility = 'visible';
+            }
         } else {toggleAttackButtonsEnable();}
     } catch (error) {
         console.error(error);

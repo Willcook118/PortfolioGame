@@ -309,6 +309,10 @@ img {
     height: 15%;
 }
 
+#introBattleNavigation {
+    visibility: hidden;
+}
+
 /* 
     This is styling for the maps 
 */
