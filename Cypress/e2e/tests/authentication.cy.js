@@ -1,12 +1,16 @@
 const {registerPageSelectors} = require('../../fixtures/locators/registerPageSelectors');
 const {loginPageSelectors} = require('../../fixtures/locators/loginPageSelectors');
 const baseUrl = 'http://localhost:3000';
+const randomNumber = Math.floor(Math.random() * 1000);
+
+function navigateToRegister() {
+    cy.visit(baseUrl + '/auth/register');
+}
 
 describe('Register New User', () => {
     it('successfully register a new user', () => {
-        const randomNumber = Math.floor(Math.random() * 1000);
+        navigateToRegister();
         
-        cy.visit(baseUrl + '/auth/register');
         cy.get(registerPageSelectors.username).type('testuser' + randomNumber);
         cy.get(registerPageSelectors.password).type('testingpassword123');
         cy.get(registerPageSelectors.register_submit).click();
